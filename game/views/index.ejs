@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<!-- Author: Dorian Cauwe -->
+<html>
+  <head>
+    <title>Chem Game</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  
+  <body>
+    
+    <div id="floating-icons" class="unselectable">
+      <div class="icon" id="periodic-open"><img width="35" height="35" src="/img/period-table-icon.png"/></div>
+      <div class="icon"><img width="35" height="35" src="/img/play-circle-outline.png"/></div>
+      <div class="icon"><img width="35" height="35" src="/img/help-circle-outline.png"/></div>
+    </div>
+    
+    <canvas id="game-canvas">
+      <h1>Sorry..</h1>
+      <h3>Your computer doesn't support HTML5 Canvas</h3>
+    </canvas>
+    
+    <div id="periodic-wrapper">
+      <div id="periodic-modal">
+        <img class="close" src="/img/close.png">
+        <h2>Search for Orbitals</h2>
+        <input type="text" id="orbital-search-box" placeholder="Enter position of desired orbital in Abbreviated Notation (ex: 1s2 for Helium)">
+        <button id="orbital-search-button">Search for Orbital</button>
+        <img src="/img/periodic-table-blocked.jpg" id="pertable-img">
+      </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+	
+    <script src="/data/data.js"></script>
+    
+    <script src="/js/periodicTableManager.js"></script>
+    <script src="/js/player.js"></script>
+    <script src="/js/obstacle.js"></script>
+    <script src="/js/dotMan.js"></script>
+    <script src="/js/platform.js"></script>
+    <script src="/js/mouseManager.js"></script>
+    <script src="/js/game.js"></script>
+    <script src="/js/prepare.js"></script>
+    <script src="/js/connections.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

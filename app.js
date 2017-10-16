@@ -10,7 +10,7 @@ app.get('/',function(req, res) {
     res.render(__dirname + '/game/views/index.ejs');
 });
 
-app.listen(2000, function(){
+app.listen(process.env.PORT || 5000, function(){
 	console.log("Server Started");
 });
 

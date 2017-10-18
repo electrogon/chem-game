@@ -5,6 +5,8 @@
 console.log("Programming by: Dorian Cauwe");
 console.log("Research and Testing: Aksel Andreassen")
 
+alert("Directions: \n Dr. Bob has let his electron loose! Move the yellow electron by presing on the square you would like it to move to. The goal of the game is to get the electron to the other side of the screen.")
+
 var gameCanvas = document.getElementById("game-canvas");
 
 $(window).resize(function(){ //resize canvas on window resize

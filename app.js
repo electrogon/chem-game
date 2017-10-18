@@ -27,8 +27,6 @@ var answers = [
   ["d"]
 ]
 
-alert("Directions: \n Dr. Bob has let his electron loose! Move the yellow electron by presing on the square you would like it to move to. The goal of the game is to get the electron to the other side of the screen.")
-
 for (element in elements){
   if (element < 51){
    questions.push("What is the abbreviated notation of " + elements[element]["name"] + "? (ex: 1s2 for Helium)");

@@ -1,0 +1,13 @@
+{
+  "elements":[
+    {"name":"Hydrogen", "notation":"1s1"},
+    {"name":"Helium", "notation":"1s2"},
+    {"name":"Magnesium", "notation":"3s2"},
+    {"name":"Yttrium", "notation":"4d1"},
+    {"name":"Cobalt", "notation":"3d7"},
+    {"name":"Zinc", "notation":"3d10"},
+    {"name":"Lanthanum", "notation":"6f1"},
+    {"name":"Mercury", "notation":"5d10"},
+    {"name":"Fluorine", "notation":"2p5"}
+  ]
+}

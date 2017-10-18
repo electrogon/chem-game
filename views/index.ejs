@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<!-- Author: Dorian Cauwe -->
+<html>
+  <head>
+    <title>Chem Game</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  
+  <body>
+    <div id="hidden-data">
+      <p id="periodic-files-questions"><%=questions%></p>
+      <p id="periodic-files-answers"><%=answers%></p>
+    </div>
+    
+    <canvas id="game-canvas">
+      <h1>Sorry..</h1>
+      <h3>Your computer doesn't support HTML5 Canvas</h3>
+    </canvas>
+    
+    <div id="question-modal">
+      <h3 id="question">What is 1</h3>
+      <input placeholder="answer" id="question-answer-box">
+      <button id="submit-answer">Submit Answer</button>
+      
+      <br/>
+      <a href="/img/periodic-table.png" target="_blank">Periodic Table</a>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script src="/data/data.js"></script>
+    
+    <script src="/js/visual/tile.js"></script>
+    <script src="/js/visual/obstacle.js"></script>
+    <script src="/js/visual/player.js"></script>
+    
+    <script src="/js/main.js"></script>
+  </body>
+</html>

@@ -20,7 +20,7 @@ var questions = [
 var answers = [
   ["10"],
   ["2"],
-  ["3"],
+  ["6"],
   ["Hydrogen"],
   ["s"],
   ["p"],

@@ -1,4 +1,4 @@
-var tile = function(x, y, size, mine){
+var Tile = function(x, y, size, mine){
   this.x = x;
   this.y = y;
   this.size = size

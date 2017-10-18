@@ -5,7 +5,8 @@
 console.log("Programming by: Dorian Cauwe");
 console.log("Research and Testing: Aksel Andreassen")
 
-alert("Directions: \n Dr. Bob has let his electron loose! Move the yellow electron by presing on the square you would like it to move to. The goal of the game is to get the electron to the other side of the screen.")
+
+setTimeout(function(){ alert("Directions: \n Dr. Bob has let his electron loose! Move the yellow electron by presing on the square you would like it to move to. The goal of the game is to get the electron to the other side of the screen. Don't hit the red!")}, 400);
 
 var gameCanvas = document.getElementById("game-canvas");
 
@@ -23,6 +24,8 @@ var movesLeft = 5;
 level = 1;
 var answer = "bob";
 var coords;
+
+var gameOverBool = false;
 
 var submitFunc = function() { alert("no question!") }
 
@@ -74,7 +77,7 @@ var gameProperties = function(){
         
       var mine = !(true && Math.floor(Math.random()*(5+(6-level))));
       
-      this.tiles.push(new tile(x*($(window).width()/tilesPerRow), y, $(window).width()/tilesPerRow, mine)) //, "/img/ColorElementCells/" + tileSrc));
+      this.tiles.push(new Tile(x*($(window).width()/tilesPerRow), y, $(window).width()/tilesPerRow, mine)) //, "/img/ColorElementCells/" + tileSrc));
       
       if (this.tiles[this.tiles.length-1].checkCollision(($(window).width()/tilesPerRow)*2.5-2, $(window).height()/2)){
         this.tiles[this.tiles.length-1].mine = false;
@@ -90,7 +93,19 @@ var gameProperties = function(){
 }
 
 var gameOver = function(){
+  gameOverBool  = true;
   
+  setTimeout(function() { props.ctx.fillStyle = "#000000";
+  props.ctx.fillRect(0, 0, $(window).width(), $(window).height());
+  //props.ctx.fillStyle = "#000000";
+  
+                         
+  alert("Game Over")}, 500);
+}
+
+var nextLevel = function(){
+  level += 1;
+  props = new gameProperties();
 }
 
 var makeQuestion = function(funcCb){
@@ -129,12 +144,11 @@ function render(props){
   props.player.update();
   props.player.draw(ctx);
   
-  /*
-  for (obstacle in props.obstacles){
-    props.obstacles[obstacle].draw(ctx);
-  }*/
-  
-  window.requestAnimationFrame(function () { render(props); });
+  console.log("still_running")
+
+  if (!gameOverBool){
+    window.requestAnimationFrame(function () { render(props); }); 
+  }
 }
 
 $("#game-canvas").mousemove(function(event){

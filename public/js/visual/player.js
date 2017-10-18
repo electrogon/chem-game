@@ -26,8 +26,18 @@ var player = function(x, y, radius, color){ // Ball Player
     
     if (this.x > $(window).width()-50){
       if (!this.won){
-        alert("You Won");
+        alert("You won!")
+        
         this.won = true;
+        //nextLevel();
+        
+        //gameOverBool = true;
+        //movesLeft  = 5;
+        
+        //alert("You Won. On to the next level");
+        
+        //gameOverBool  = false;
+        //render(props);
       }
       
       location.reload();
